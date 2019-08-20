@@ -330,10 +330,9 @@ GtkWidget *create_text_view(void)
 
 	gtk_text_view_set_left_margin(GTK_TEXT_VIEW(view), 4);
 	gtk_text_view_set_right_margin(GTK_TEXT_VIEW(view), 4);
-	gtk_text_view_set_top_margin(GTK_TEXT_VIEW(view), 2);
-	gtk_text_view_set_bottom_margin(GTK_TEXT_VIEW(view), 2);
+	gtk_text_view_set_pixels_above_lines(GTK_TEXT_VIEW(view), 4);
+	gtk_text_view_set_pixels_below_lines(GTK_TEXT_VIEW(view), 4);
 
-	
 	g_signal_connect(G_OBJECT(view), "key-press-event",
 		G_CALLBACK(cb_key_press_event), NULL);
 	g_signal_connect(G_OBJECT(view), "button-press-event",
